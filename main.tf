@@ -1,5 +1,5 @@
 provider "aws"{
-  default="ca-central-1"
+  region="ca-central-1"
 }
 resource "aws_instance" "web" {
   count                  = 2
