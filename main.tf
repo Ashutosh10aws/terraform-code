@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "web" {
   count                  = 2
   ami                    = "ami-0c9bfc21ac5bf10eb" // Amazon Linux2
-  instance_type          = "t3.micro"
+  instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.web.id]
   user_data = templatefile("user_data.sh.tpl", { // Template File
     f_name = "Denis"
