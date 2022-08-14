@@ -1,3 +1,6 @@
+provider "aws"{
+  default="ca-central-1"
+}
 resource "aws_instance" "web" {
   count                  = 2
   ami                    = "ami-0c9bfc21ac5bf10eb" // Amazon Linux2
